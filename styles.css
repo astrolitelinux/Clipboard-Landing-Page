@@ -1,0 +1,108 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font: inherit;
+	line-height: normal;
+}
+
+body {
+	max-width: 1440px;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-size: 18px;
+	margin: 0 auto;
+}
+
+h1, h2, h3 {
+	color: hsl(210, 10%, 33%);
+}
+
+p {
+	color: hsl(201, 11%, 66%);
+}
+
+.header {
+	height: 363px;
+	background-image: url(images/bg-header-desktop.png);
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.header > img {
+	padding-top: 131px;
+	padding-bottom: 52px;
+}
+
+.header > h1 {
+	font-size: 46px;
+	font-weight: 600;
+	letter-spacing: -0.75px;
+
+}
+
+.subheader {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.subheader p.tagline {
+	font-size: 20px;
+	letter-spacing: 0.15px;
+	line-height: 1.5;
+	padding-bottom: 48px;
+}
+
+button.ios {
+	width: 227px;
+	height: 56px;
+	border-radius: 28px;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	color: hsl(0, 0%, 100%);
+	background-color: hsl(171, 66%, 44%);
+	margin-right: 16px;
+}
+
+button.mac {
+	width: 227px;
+	height: 56px;
+	border-radius: 28px;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	color: hsl(0, 0%, 100%);
+	background-color: hsl(233, 100%, 69%);
+}
+
+
+
+.subheader h2 {
+	font-size: 36px;
+	font-weight: 600;
+	letter-spacing: -0.59px;
+	padding-top: 150px;
+}
+
+.subheader p.desc {
+	font-size: 18px;
+	letter-spacing: 0.14px;
+	line-height: 1.667;
+	padding-top: 16px;
+	padding-bottom: 80px;
+}
+
+
+
+
+
+
+
+.brands-flex > img {
+	display: inline-block;
+}
