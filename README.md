@@ -80,4 +80,4 @@ A massive thank you to our community sponsors!
 - [Dracula PRO](https://bit.ly/fem-dracula) is a beautiful dark theme to help keep you focused and productive while you code. The theme isn't just for your editor either. You can also apply it to your most-used apps like your terminal and even Slack!
 
 
-The Sketch Cloud URL for this design is: [https://www.sketch.com/s/2640a8ee-a862-4389-b5cf-741834f6d188](https://www.sketch.com/s/2640a8ee-a862-4389-b5cf-741834f6d188).
+The Sketch Cloud URL for this design is: [https://www.sketch.com/s/2640a8ee-a862-4389-b5cf-741834f6d188].

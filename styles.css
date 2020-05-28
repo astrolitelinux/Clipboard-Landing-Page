@@ -13,9 +13,12 @@ button {
 
 body {
 	max-width: 1440px;
+	width: 100%;
 	font-family: 'Bai Jamjuree', sans-serif;
 	font-size: 18px;
 	margin: 0 auto;
+	border: 3px solid aqua;
+	box-sizing: border-box;
 }
 
 h1, h2, h3 {
@@ -48,6 +51,7 @@ p {
 .subheader {
 	padding-top: 20px;
 	text-align: center;
+
 }
 
 .subheader p.tagline {
@@ -80,8 +84,6 @@ button.mac {
 	background-color: hsl(233, 100%, 69%);
 }
 
-
-
 .subheader h2 {
 	font-size: 36px;
 	font-weight: 600;
@@ -97,6 +99,95 @@ button.mac {
 	padding-bottom: 80px;
 }
 
+.computer {
+	display: flex;
+	justify-content: space-between;
+
+	position:relative;
+	width:1212px;
+	height:572px;
+	left: -30px;
+	max-width: 100%;
+}
+
+
+
+.computer > img {
+	position: relative;
+	top: 0;
+	left: 0;
+	/** Learned A New Property! */
+	clip-path: inset(0 0 0 30px);
+	max-width: 752px;
+	max-height: 572px;
+	min-width: 0;
+	min-height: 0;
+	overflow: hidden;
+
+}
+
+.flex-cont-one {
+	width: 350px;
+	height: 406px;
+	min-width: 0;
+	min-height: 0;
+	overflow: hidden;
+}
+
+.item-one {
+	width: 350px;
+	height: 98px;
+}
+
+.item-one h3 {
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: -0.39px;
+	padding-bottom: 8px;
+}
+
+.item-one p {
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.12px;
+	line-height: 1.875;
+}
+
+.item-one.pad {
+	padding-bottom: 56px;
+}
+
+.access {
+	display: flex;
+	flex-direction: column;
+}
+.access h2 {
+	text-align: center;
+	margin-top: 150px;
+	margin-bottom: 19px;
+	font-size: 36px;
+	font-weight: 600;
+	letter-spacing: -0.59px;
+}
+
+.access p {
+	text-align: center;
+	margin-bottom: 110px;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 0.14px;
+	line-height: 30px;
+}
+
+
+.access img {
+	display: block;
+	width: 812px;
+	height: 475px;
+	margin: auto;
+	/*position: absolute;*/
+	/*clip: rect(110px, 160px, 170px, 60px);*/
+}
 
 
 
@@ -105,4 +196,5 @@ button.mac {
 
 .brands-flex > img {
 	display: inline-block;
+
 }
