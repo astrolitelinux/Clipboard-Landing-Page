@@ -164,7 +164,7 @@ button.mac {
 .access {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	height: 805px;
 	margin-top: 140px;
@@ -187,9 +187,7 @@ button.mac {
 
 .flex-img {
 	display: flex;
-	/*justify-content: center;
-	width: 812px;
-	height: 475px;*/
+	justify-content: center;
 }
 
 .supercharge > h2 {
@@ -207,15 +205,15 @@ button.mac {
 	line-height: 1.667;
 	text-align: center;
 	margin-top: 19px;
-	margin-bottom: 70px;
+	margin-bottom: 76px;
 }
 
 .supercharge-flex {
 	display: flex;
-	justify-content: space-between;
-	max-width: 1110px;
+	justify-content: center;
 	margin: 0 auto;
 	text-align: center;
+	flex-wrap: wrap;
 }
 
 .super-item {
@@ -225,6 +223,8 @@ button.mac {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	margin-right: 30px;
+	margin-bottom: 20px;
 }
 
 .super-item h3 {
@@ -259,19 +259,21 @@ button.mac {
 
 .brands-flex {
 	display: flex;
-	justify-content: space-between;
-	max-width: 1110px;
-	margin: 150px auto;
+	justify-content: center;
+	margin: 0 auto;
 	align-items: center;
-	/* TODO - wrap property */
+	height: 372px;
+	flex-wrap: wrap;
 }
 
 .brands-flex img {
 	flex-shrink: 0;
+	margin: 10px 42px;
 }
 
 .download {
 	text-align: center;
+	margin: 30px auto;
 }
 
 .download h2 {
@@ -295,7 +297,7 @@ button.mac {
 	position: absolute;
 	left: 0;
 	right: 0;
-	margin-top: 150px;
+	margin-top: 120px;
 }
 
 footer {
@@ -327,10 +329,6 @@ footer {
 	align-content: space-between;
 }
 
-footer p.end {
-	width: 255px;
-	padding-right: 0;
-}
 footer p {
 	width: 160px;
 	height: 30px;
@@ -380,6 +378,27 @@ footer p {
 	}
 	.access {
 		margin-top: -30px;
+	}
+	.flex-img {
+		width: 85%;
+	}
+	footer {
+		margin: 0 100px;
+	}
+	.inner-footer-flex {
+		justify-content: start;
+	}
+	.links-flex {
+		margin-left: 100px;
+	}
+	.socials > img {
+		padding-bottom: 5px;
+	}
+	.socials [alt="twitter"] {
+	padding: 0 0 5px 0;
+	}
+	.socials [alt="instagram"] {
+		padding-bottom: 0;
 	}
 
 }
