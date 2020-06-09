@@ -11,12 +11,9 @@ button {
 }
 
 body {
-	max-width: 1440px;
-	/*width: 100%;*/
+	/*max-width: 1440px;*/
 	font-family: 'Bai Jamjuree', sans-serif;
-	font-size: 18px;
 	margin: 0 auto;
-	border: 3px solid aqua;
 	overflow-x: hidden;
 }
 
@@ -37,27 +34,25 @@ button {
 	letter-spacing: 0.5px;
 	line-height: 1.667;
 	color: hsl(0, 0%, 100%);
+	cursor: pointer;
 }
 
 button.ios {
 	background-color: hsl(171, 66%, 44%);
-	box-shadow: 0px 10px 20px hsla(160, 63.9%, 71.8%, 0.5),
-				inset 0px -3px hsla(0, 0%, 0%, 0.15),
-				inset 0px 0px 0px 1px hsl(0, 0%, 59.2%);
-
+	box-shadow: 0px 10px 20px hsla(160, 63.9%, 71.8%, 0.5), inset 0px -3px hsla(0, 0%, 0%, 0.15), inset 0px 0px 0px 1px hsl(0, 0%, 59.2%);
 	margin-right: 16px;
 }
 
 button.mac {
 	background-color: hsl(233, 100%, 69%);
-	box-shadow: 0px 10px 20px hsla(0, 0%, 0%, 0.1),
-				inset 0px -3px hsla(0, 0%, 0%, 0.15);
+	box-shadow: 0px 10px 20px hsla(0, 0%, 0%, 0.1), inset 0px -3px hsla(0, 0%, 0%, 0.15);
 }
 
 .header {
 	height: 363px;
 	background-image: url(images/bg-header-desktop.png);
 	background-repeat: no-repeat;
+	background-size: cover;
 	text-align: center;
 }
 
@@ -74,6 +69,8 @@ button.mac {
 }
 
 .subheader {
+	max-width: 730px;
+	margin: 0 auto;
 	padding-top: 20px;
 	text-align: center;
 
@@ -83,8 +80,7 @@ button.mac {
 	font-size: 20px;
 	letter-spacing: 0.15px;
 	line-height: 1.5;
-	padding-bottom: 48px;
-
+	margin-bottom: 48px;
 }
 
 
@@ -101,6 +97,7 @@ button.mac {
 	line-height: 1.667;
 	padding-top: 16px;
 	padding-bottom: 80px;
+	max-width: 730px;
 }
 
 .computer {
@@ -109,11 +106,9 @@ button.mac {
 	grid-template-rows: 1fr;
 	column-gap: 9.07%;
 	position:relative;
-	left: -32px;
+	left: -70px;
 	max-width:1212px;
 	align-items: center;
-
-
 }
 
 .grid-img img {
@@ -260,20 +255,20 @@ button.mac {
 .brands-flex {
 	display: flex;
 	justify-content: center;
-	margin: 0 auto;
+	margin: 140px auto;
 	align-items: center;
-	height: 372px;
 	flex-wrap: wrap;
 }
 
 .brands-flex img {
 	flex-shrink: 0;
-	margin: 10px 42px;
+	margin: 20px 42px;
 }
 
 .download {
 	text-align: center;
 	margin: 30px auto;
+	max-width: 730px;
 }
 
 .download h2 {
@@ -289,6 +284,7 @@ button.mac {
 	line-height: 1.667;
 	margin-top: 19px;
 	margin-bottom: 48px;
+
 }
 
 .footer-wrap {
@@ -302,7 +298,7 @@ button.mac {
 
 footer {
 	display: grid;
-	grid-template-columns: minmax(500px, 825px) 1fr;
+	grid-template-columns: minmax(375px, 825px) 1fr;
 	align-items: center;
 	height: 150px;
 	margin: 0 165px;
@@ -311,52 +307,62 @@ footer {
 .inner-footer-flex {
 	display: flex;
 	justify-content: space-between;
-
+	height: 72px;
 }
 
 .inner-footer-flex > img {
 	width: 55px;
 	height: 55px;
 	padding-top: 5px;
-
 }
 
 .links-flex {
 	max-width: 635px;
-	height: 72px;
+	height: 100%;
 	display: inline-flex;
 	flex-wrap: wrap;
 	align-content: space-between;
+	margin-left: 60px;
 }
 
-footer p {
+footer a {
 	width: 160px;
 	height: 30px;
 	font-size: 18px;
 	letter-spacing: 0.14px;
 	line-height: 1.667;
 	padding-right: 30px;
+	text-decoration: none;
+	color: hsl(210, 9.5%, 32.9%);
 }
 
 .socials {
 	text-align: right;
 	color: hsl(210, 9.5%, 32.9%);
+	display: flex;
+	width: 120px;
+	justify-self: end;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
 }
 .socials > img {
 	width: 24px;
 	height: 24px;
-	padding-left: 24px;
 }
 
 /* Attribute selector */
 .socials [alt="twitter"] {
 	width: 24px;
 	height: 19.5px;
-	padding: 2.25px 0 2.25px 24px;
 }
 
-/* MEDIA QUERIES */
-@media only screen and (max-width: 950px) {
+/* -----------
+MEDIA QUERIES
+---------------*/
+
+@media screen and (max-width: 950px) {
 	.computer {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto 1fr;
@@ -382,23 +388,128 @@ footer p {
 	.flex-img {
 		width: 85%;
 	}
+	.brands-flex {
+		margin: 120px auto;
+	}
 	footer {
 		margin: 0 100px;
+
 	}
 	.inner-footer-flex {
-		justify-content: start;
+		height: auto;
+		align-items: center;
 	}
 	.links-flex {
-		margin-left: 100px;
+		margin-left: 170px;
 	}
-	.socials > img {
-		padding-bottom: 5px;
-	}
-	.socials [alt="twitter"] {
-	padding: 0 0 5px 0;
-	}
-	.socials [alt="instagram"] {
-		padding-bottom: 0;
+	.socials {
+		width: 105px;
 	}
 
 }
+/* -------------------
+DEVICES MEDIA QUERIES
+-------------------- */
+@media screen and (min-device-width: 360px) and (max-device-width: 500px) {
+
+	.header {
+		height: auto;
+		background-image: url(images/bg-header-desktop.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 375px;
+		margin: 0 auto;
+	}
+	.header > img {
+		padding-top: 123px;
+		padding-bottom: 64px;
+	}
+	.header > h1 {
+		font-size: 32px;
+		letter-spacing: -0.52px;
+		max-width: 311px;
+		margin: 0 auto;
+	}
+	.subheader {
+		max-width: 311px;
+		margin: 16px auto 0 auto;
+	}
+	.subheader p.tagline {
+		font-size: 16px;
+		letter-spacing: 0.12px;
+		line-height: 1.625;
+	}
+	button {
+		width: 100%;
+
+	}
+	button.ios {
+		margin-bottom: 24px;
+		margin-right: 0;
+	}
+	.subheader h2 {
+		font-size: 28px;
+		letter-spacing: -0.46px;
+	}
+	.subheader p.desc {
+		font-size: 16px;
+		letter-spacing: 0.12px;
+		line-height: 1.625;
+		padding-bottom: 65px;
+	}
+	.computer {
+		width: 312px;
+		display: grid;
+		grid-template-columns: 312px;
+		justify-items: center;
+		margin: 0 auto;
+		row-gap: 50px;
+	}
+	.grid-img {
+		width: 100%;
+	}
+	.inner-comp-flex {
+		justify-content: space-between;
+	}
+	.flex-item {
+		width: auto;
+		height: auto;
+
+	}
+
+}
+
+/*@media screen and (max-width: 500px) {
+
+	.header {
+		height: auto;
+		background-image: url(images/bg-header-desktop.png);
+		background-repeat: no-repeat;
+		text-align: center;
+		background-size: cover;
+	}
+	.header > img {
+		padding-top: 123px;
+		padding-bottom: 64px;
+	}
+	.header > h1 {
+		font-size: 32px;
+		max-width: 311px;
+		margin: 0 auto;
+	}
+	.subheader {
+		max-width: 311px;
+		margin: 16px auto 0 auto;
+	}
+	.subheader p.tagline {
+		font-size: 16px;
+		letter-spacing: 0.15px;
+		line-height: 1.5;
+		margin-bottom: 48px;
+
+	}
+
+
+}*/
+
+
