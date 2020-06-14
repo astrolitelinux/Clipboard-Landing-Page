@@ -48,34 +48,33 @@ button.mac {
 	box-shadow: 0px 10px 20px hsla(0, 0%, 0%, 0.1), inset 0px -3px hsla(0, 0%, 0%, 0.15);
 }
 
-.header {
-	height: 363px;
+.header-logo {
 	background-image: url(images/bg-header-desktop.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
+	height: 363px;
+
 }
 
-.header > img {
+.header-logo > img {
 	padding-top: 131px;
-	padding-bottom: 52px;
 }
 
-.header > h1 {
-	font-size: 46px;
-	font-weight: 600;
-	letter-spacing: -0.75px;
-
-}
 
 .subheader {
 	max-width: 730px;
-	margin: 0 auto;
-	padding-top: 20px;
+	margin: -50px auto 0;
 	text-align: center;
 
 }
+.subheader > h1 {
+	font-size: 46px;
+	font-weight: 600;
+	letter-spacing: -0.75px;
+	padding-bottom: 16px;
 
+}
 .subheader p.tagline {
 	font-size: 20px;
 	letter-spacing: 0.15px;
@@ -88,30 +87,28 @@ button.mac {
 	font-size: 36px;
 	font-weight: 600;
 	letter-spacing: -0.59px;
-	padding-top: 150px;
+	padding: 150px 0 19px;
 }
 
 .subheader p.desc {
 	font-size: 18px;
 	letter-spacing: 0.14px;
 	line-height: 1.667;
-	padding-top: 16px;
 	padding-bottom: 80px;
-	max-width: 730px;
 }
 
 .computer {
 	display: grid;
 	grid-template-columns: auto 1fr;
-	grid-template-rows: 1fr;
-	column-gap: 9.07%;
+	grid-template-rows: 572px;
+	column-gap: 110px;
 	position:relative;
 	left: -70px;
 	max-width:1212px;
 	align-items: center;
 }
 
-.grid-img img {
+.comp-img img {
 	position: relative;
 	top: 0;
 	left: 0;
@@ -121,17 +118,12 @@ button.mac {
 
 }
 
-.wrapper {
-	display: grid;
-	height: 474px;
-}
-
 .inner-comp-flex {
 	display: flex;
 	flex-direction: column;
 	max-height: 406px;
 	position: relative;
-	top: 18px;
+	top: -30px;
 	justify-content: space-between;
 
 }
@@ -145,6 +137,7 @@ button.mac {
 	font-size: 24px;
 	font-weight: 600;
 	letter-spacing: -0.39px;
+	padding-bottom: 8px;
 }
 
 .flex-item p {
@@ -152,7 +145,6 @@ button.mac {
 	font-weight: 400;
 	letter-spacing: 0.12px;
 	line-height: 1.875;
-	padding-top: 8px;
 }
 
 
@@ -169,7 +161,7 @@ button.mac {
 	font-size: 36px;
 	font-weight: 600;
 	letter-spacing: -0.59px;
-	margin-bottom: 19px;
+	padding-bottom: 19px;
 }
 
 .access-text p {
@@ -180,7 +172,7 @@ button.mac {
 	max-width: 730px;
 }
 
-.flex-img {
+.access-img {
 	display: flex;
 	justify-content: center;
 }
@@ -191,6 +183,7 @@ button.mac {
 	letter-spacing: -0.59px;
 	text-align: center;
 	margin-top: 30px;
+	padding-bottom: 19px;
 }
 
 .supercharge > p {
@@ -199,8 +192,7 @@ button.mac {
 	letter-spacing: 0.14px;
 	line-height: 1.667;
 	text-align: center;
-	margin-top: 19px;
-	margin-bottom: 76px;
+	padding-bottom: 76px;
 }
 
 .supercharge-flex {
@@ -275,6 +267,7 @@ button.mac {
 	font-size: 36px;
 	font-weight: 600;
 	letter-spacing: -0.59px;
+	padding-bottom: 19px;
 }
 
 .download p {
@@ -282,9 +275,7 @@ button.mac {
 	font-weight: 400;
 	letter-spacing: 0.14px;
 	line-height: 1.667;
-	margin-top: 19px;
-	margin-bottom: 48px;
-
+	padding-bottom: 48px;
 }
 
 .footer-wrap {
@@ -318,7 +309,6 @@ footer {
 
 .links-flex {
 	max-width: 635px;
-	height: 100%;
 	display: inline-flex;
 	flex-wrap: wrap;
 	align-content: space-between;
@@ -358,49 +348,86 @@ footer a {
 	height: 19.5px;
 }
 
+.my-footer {
+	margin-top: 5px;
+}
+
 /* -----------
-MEDIA QUERIES
+MEDIA QUERIES:
+less than 950px
 ---------------*/
 
 @media screen and (max-width: 950px) {
+	.subheader {
+		max-width: 85%;
+	}
+	.subheader > h1 {
+		line-height: 1;
+	}
+	.subheader h2 {
+		padding: 120px 0 19px;
+	}
 	.computer {
 		grid-template-columns: 1fr;
-		grid-template-rows: auto 1fr;
-		row-gap: 10px;
+		grid-auto-rows: auto;
+		row-gap: 30px;
+		column-gap: 0;
 		position: static;
 		justify-items: center;
 	}
-	.grid-img {
-		max-width: 75%;
+	.comp-img {
+		width: 75%;
 	}
-	.grid-img img {
+	.comp-img img {
 		clip-path: none;
 		margin: 0 auto;
 		position: static;
 	}
 	.inner-comp-flex {
-		justify-content: space-evenly;
+		justify-content: space-around;
 		text-align: center;
+		position: static;
 	}
 	.access {
-		margin-top: -30px;
+		max-width: 90%;
+		margin: 0 auto;
+		height: auto;
 	}
-	.flex-img {
-		width: 85%;
+	.access-text {
+		padding-bottom: 70px;
+	}
+	.access-img {
+		width: 90%;
+	}
+	.supercharge {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	.supercharge > h2 {
+		margin-top: 15px;
+	}
+	.supercharge > p {
+		padding-bottom: 60px;
 	}
 	.brands-flex {
-		margin: 120px auto;
+		margin: 100px auto;
+	}
+	.download {
+		margin: 0 auto;
+		max-width: 85%;
 	}
 	footer {
 		margin: 0 100px;
+		height: auto;
 
 	}
 	.inner-footer-flex {
 		height: auto;
 		align-items: center;
+		padding: 10px 0;
 	}
 	.links-flex {
-		margin-left: 170px;
+		margin-left: 125px;
 	}
 	.socials {
 		width: 105px;
@@ -412,27 +439,23 @@ DEVICES MEDIA QUERIES
 -------------------- */
 @media screen and (min-device-width: 360px) and (max-device-width: 500px) {
 
-	.header {
-		height: auto;
-		background-image: url(images/bg-header-desktop.png);
+	.header-logo {
+		background-image: url(images/bg-header-mobile.png);
 		background-repeat: no-repeat;
 		background-size: cover;
-		width: 375px;
-		margin: 0 auto;
 	}
-	.header > img {
+	.header-logo > img {
 		padding-top: 123px;
 		padding-bottom: 64px;
 	}
-	.header > h1 {
+	.subheader {
+		max-width: 311px;
+	}
+	.subheader > h1 {
 		font-size: 32px;
 		letter-spacing: -0.52px;
 		max-width: 311px;
 		margin: 0 auto;
-	}
-	.subheader {
-		max-width: 311px;
-		margin: 16px auto 0 auto;
 	}
 	.subheader p.tagline {
 		font-size: 16px;
@@ -460,23 +483,123 @@ DEVICES MEDIA QUERIES
 	.computer {
 		width: 312px;
 		display: grid;
-		grid-template-columns: 312px;
+		grid-template-rows: auto auto;
 		justify-items: center;
 		margin: 0 auto;
 		row-gap: 50px;
+		padding-bottom: 100px;
 	}
 	.grid-img {
 		width: 100%;
 	}
 	.inner-comp-flex {
 		justify-content: space-between;
+		max-height: none;
 	}
 	.flex-item {
 		width: auto;
 		height: auto;
-
 	}
-
+	.flex-item h3 {
+		font-size: 24px;
+		letter-spacing: -0.39px;
+	}
+	.flex-item p {
+		font-size: 16px;
+		letter-spacing: 0.12px;
+	}
+	.access {
+		max-width: none;
+		width: 312px;
+		padding-bottom: 100px;
+	}
+	.access-text h2 {
+		font-size: 28px;
+		letter-spacing: -0.46px;
+		padding-bottom: 16px;
+	}
+	.access-text p {
+		font-size: 16px;
+		letter-spacing: 0.12px;
+	}
+	.access-img {
+		width: 105%;
+	}
+	.supercharge {
+		max-width: 312px;
+	}
+	.supercharge h2 {
+		font-size: 28px;
+		letter-spacing: -0.46px;
+	}
+	.supercharge p {
+		font-size: 16px;
+		letter-spacing: 0.12px;
+		padding-bottom: 90px;
+	}
+	.supercharge-flex {
+		flex-direction: column;
+	}
+	.super-item {
+		width: auto;
+		margin: 0;
+	}
+	.super-item.box {
+		padding-top: 55px;
+	}
+	.brands-flex {
+		flex-direction: column;
+		height: 439px;
+	}
+	.download {
+		width: 312px;
+	}
+	.download h2 {
+		font-size: 24px;
+		letter-spacing: -0.46px;
+	}
+	.download p {
+		font-size: 16px;
+		letter-spacing: 0.12px;
+	}
+	footer {
+		display: block;
+		margin: 0 100px;
+		height: auto;
+	}
+	.inner-footer-flex {
+		height: auto;
+		align-items: center;
+		padding: 10px 0;
+		flex-direction: column;
+	}
+	.inner-footer-flex > img {
+		padding-bottom: 20px;
+	}
+	.links-flex {
+		margin: 0;
+		flex-direction: column;
+	}
+	footer a {
+		width: auto;
+		height: auto;
+		padding: 0;
+		font-size: 16px;
+		letter-spacing: 0.12px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.order {
+		order: 0;
+	}
+	.socials {
+		padding-bottom: 20px;
+		width: auto;
+		justify-content: space-between;
+	}
+	.my-footer {
+		padding-bottom: 10px;
+	}
 }
 
 /*@media screen and (max-width: 500px) {
