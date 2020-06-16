@@ -121,7 +121,7 @@ button.mac {
 .inner-comp-flex {
 	display: flex;
 	flex-direction: column;
-	max-height: 406px;
+	height: 406px;
 	position: relative;
 	top: -30px;
 	justify-content: space-between;
@@ -279,8 +279,7 @@ button.mac {
 }
 
 .footer-wrap {
-	/*background-color: hsla(201, 11.5%, 65.9%, 0.1);*/
-	background-color: lightcyan;
+	background-color: hsla(201, 11.5%, 65.9%, 0.1);
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -326,6 +325,10 @@ footer a {
 	color: hsl(210, 9.5%, 32.9%);
 }
 
+a:hover {
+	color: hsl(171, 66.2%, 44.1%);
+}
+
 .socials {
 	text-align: right;
 	color: hsl(210, 9.5%, 32.9%);
@@ -340,6 +343,10 @@ footer a {
 .socials > img {
 	width: 24px;
 	height: 24px;
+}
+
+.socials > img:hover {
+	fill: hsl(171, 66.2%, 44.1%);
 }
 
 /* Attribute selector */
@@ -387,6 +394,7 @@ less than 950px
 		justify-content: space-around;
 		text-align: center;
 		position: static;
+		padding-bottom: 60px;
 	}
 	.access {
 		max-width: 90%;
@@ -511,7 +519,7 @@ DEVICES MEDIA QUERIES
 	.access {
 		max-width: none;
 		width: 312px;
-		padding-bottom: 100px;
+		padding-bottom: 90px;
 	}
 	.access-text h2 {
 		font-size: 28px;
@@ -532,20 +540,22 @@ DEVICES MEDIA QUERIES
 		font-size: 28px;
 		letter-spacing: -0.46px;
 	}
-	.supercharge p {
+	.supercharge > p {
 		font-size: 16px;
 		letter-spacing: 0.12px;
-		padding-bottom: 90px;
+		padding-bottom: 60px;
 	}
 	.supercharge-flex {
 		flex-direction: column;
+		justify-content: space-between;
 	}
 	.super-item {
 		width: auto;
 		margin: 0;
+		justify-content: space-around;
 	}
 	.super-item.box {
-		padding-top: 55px;
+		padding-top: 0;
 	}
 	.brands-flex {
 		flex-direction: column;
@@ -601,38 +611,5 @@ DEVICES MEDIA QUERIES
 		padding-bottom: 10px;
 	}
 }
-
-/*@media screen and (max-width: 500px) {
-
-	.header {
-		height: auto;
-		background-image: url(images/bg-header-desktop.png);
-		background-repeat: no-repeat;
-		text-align: center;
-		background-size: cover;
-	}
-	.header > img {
-		padding-top: 123px;
-		padding-bottom: 64px;
-	}
-	.header > h1 {
-		font-size: 32px;
-		max-width: 311px;
-		margin: 0 auto;
-	}
-	.subheader {
-		max-width: 311px;
-		margin: 16px auto 0 auto;
-	}
-	.subheader p.tagline {
-		font-size: 16px;
-		letter-spacing: 0.15px;
-		line-height: 1.5;
-		margin-bottom: 48px;
-
-	}
-
-
-}*/
 
 
