@@ -443,7 +443,11 @@ less than 950px
 /* -------------------
 DEVICES MEDIA QUERIES
 -------------------- */
-@media screen and (min-device-width: 360px) and (max-device-width: 500px) {
+@media screen and (min-width: 320px) {
+
+    /** max-width: 500px is too small, and widths in styles are set to work for 312px.
+    removed 'and (max-width: 500px)'
+    *TODO: Fix styles to work for landscape */
 
 	.header-logo {
 		background-image: url(images/bg-header-mobile.png);
